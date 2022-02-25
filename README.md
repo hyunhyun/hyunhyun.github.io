@@ -4,4 +4,4 @@
 * 강의들은거 정리
 <br>
 ---
-<https://hyunhyun.github.io>
+[블로그가기](https://hyunhyun.github.io)
