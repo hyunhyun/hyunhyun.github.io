@@ -1,0 +1,24 @@
+# 섹션 4 - 스프링 컨테이너와 스프링 빈
+ApplicationContext: 스프링 컨테이너
+```Java
+ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+//1)모든 빈 이름 갖고오기
+String[] names = ac.getBeanDefinitionNames(); 
+//2)빈 갖고오기
+Object bean = ac.getBean(names[1]); 
+//3) BeanDefinition.ROLE_APPLICATION - 사용자가 정의한 빈
+//ROLE_INFRASTRUCTURE - 스프링 내부에서 사용하는 빈
+BeanDefinition bd = ac.getBeanDefinition(names[1]);
+if(bd.getRole() == BeanDefinition.ROLE_APPLICATION){}
+```
+
+ac.getBean(빈이름, 타입)
+ac.getBean(타입)
+ac.getBeansOfType(타입) - 리턴타입 Map<String, 타입클래스>
+-> 부모타입 조회시 자식타입도 조회
+
+GenerixXmlApplicationContext를 이용해서 xml로 설정도 가능
+BeanDefinition
+
+> 출처 : 인프런 강의 <br>
+>  스프링 핵심 원리 -기본편 <김영한>
