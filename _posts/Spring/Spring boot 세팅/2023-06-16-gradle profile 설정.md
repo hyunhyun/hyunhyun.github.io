@@ -33,15 +33,22 @@ common: prod-common
 test: prod-test
 ```
 
-#### 순서대로
+#### 아래를 순서대로 적용 한다
+build 폴더 삭제됨
+```
+./gradlew clean
+```
 
-* ./gradlew clean
-//build 폴더 삭제됨
+build resources 아래에 해당 profile yml만 생성됨
+ 
+```
+./gradlew clean bootJar -Pprofile=prod  
+```
 
-* ./gradlew clean bootJar -Pprofile=prod  
-//build resources 아래에 해당 profile yml만 생성됨
 
-* java -jar ./build/libs/jar명.jar --spring.profiles.active.prod
+ ```
+ java -jar ./build/libs/jar명.jar --spring.profiles.active=prod
+```
   
 
 
