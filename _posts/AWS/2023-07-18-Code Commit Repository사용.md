@@ -38,4 +38,5 @@ git push -u origin master
 전에 만든 https git 자격 증명의 사용자 이름과 생성 시 자동으로 생성된 암호를 입략한다.
 그럼 github등과 동일하게 aws code commit에 소스가 업로드 된 걸 확인 할 수 있다.
 
-![스크린샷 2023-07-18 오후 10 07 46](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/f7f0f455-1216-4d95-b4a8-1b29537b81dd)
+![스크린샷 2023-07-18 오후 10 29 55](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/8c9a67ac-2906-40fd-b82c-fae1c700f885)
+
