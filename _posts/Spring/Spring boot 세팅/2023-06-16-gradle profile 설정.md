@@ -57,7 +57,7 @@ build 폴더 삭제됨
   
 
 
-  #### @Value로 설정파일 값을 잘 가져오나 확인해보자
+#### @Value로 설정파일 값을 잘 가져오나 확인해보자
 ```java
 @SpringBootApplication
 public class LogApplication {

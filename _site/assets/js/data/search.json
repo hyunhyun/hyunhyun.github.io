@@ -1,0 +1,169 @@
+[
+  
+  {
+    "title": "섹션1 - 객체 지향 설계와 스프링",
+    "url": "/posts/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%84%A4%EA%B3%84%EC%99%80%EC%8A%A4%ED%94%84%EB%A7%81/",
+    "categories": "Spring, Basic",
+    "tags": "객체지향원칙, SOLID, Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "좋은 객체 지향 프로그래밍이란?  추상화  캡슐화  상속  다형성좋은 객체 지향 설계의 5가지 원칙 (SOLID)  S  - Single Responsibility Principle(SRP) 단일 책임 원칙  O - Open/Closed Principle(OCP)  L - 리스코프 치환 법칙(Liskov substitution principle)  I - Interface Segregation Principle(ISP)  인터페이스 분리 법칙      D - Dependency Inversion Principle(DIP) 의존..."
+  },
+  
+  {
+    "title": "섹션 6 - 컴포넌트 스캔",
+    "url": "/posts/%E1%84%8F%E1%85%A5%E1%86%B7%E1%84%91%E1%85%A9%E1%84%82%E1%85%A5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%89%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%AB/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "@Component 애노테이션 붙은 객체 자동 스캔하여 bean으로 등록@Autowired로 의존객체 주입@ComponentScan (basePackages =“hello.core”)컴포넌트 스캔할 위치 지정basePackages 로 탐색 패키지 위치설정 (해당 위치포함 하위패키지까지 탐색)지정하지 않을 경우 @ComponentScan 붙은 설정정보 클래스의 패키지가 시작 위치이외 전부 내부에는 @Component 포함하여 전부 스캔대상@Component@Controller  :웹 mvc 컨트롤러@Service : 스프링 비즈..."
+  },
+  
+  {
+    "title": "섹션 7 - 의존관계 자동 주입",
+    "url": "/posts/%E1%84%8B%E1%85%B4%E1%84%8C%E1%85%A9%E1%86%AB%E1%84%80%E1%85%AA%E1%86%AB%E1%84%80%E1%85%A8-%E1%84%8C%E1%85%A1%E1%84%83%E1%85%A9%E1%86%BC-%E1%84%8C%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%B8/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "의존관계 주입방법  생성자 주읩   -&amp;gt; 제일 추천하는 방법          생성시점에 바로 주입하므로 final 키워드 사용가능해서 주입이 안될경우 컴파일 오류가 나서 더큰 오류 방지 가능함        수정자 주입(setter 주입)  필드 주입          비추천 테스트도 어렵고 단순 테스트코드 사용 방법 불가, 스프링을 띄우는 @SpringBootTest(더 느림) 유지보수 어려움      결국 테스트하려면 getter, setter 만들게 될거고 그러먼 getter,setter로 하지?        일..."
+  },
+  
+  {
+    "title": "섹션2 - 스프링 핵심 원리 이해1 - 예제 만들기",
+    "url": "/posts/%E1%84%8B%E1%85%A8%E1%84%8C%E1%85%A6%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8E%E1%85%A6%E1%84%8C%E1%85%B5%E1%84%92%E1%85%A3%E1%86%BC%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%85%E1%85%B5%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%AD%E1%86%BC/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "예제 만들기 및 객체지향 원리 적용요구사항:  주문, 고객 이 있고 고객의 등급이 vip인 경우에 할인정책을 적용한다할인정책은 변경가능하다, 어떤 db를 사용할지 정하지 못했다섹션 3 - 스프링 핵심 원리 이해2 - 객체 지향 원리 적용Junit5을 이용하여 테스트코드 작성@Test를 이용하면 main함수가 아니더라도 코드 수행 가능@BeforeEach는 각 테스트 호출전에 각각 수행됨@DisplayName(“테스트 이름”)      -Junit5 부터AppConfig라는 설정하는 클래스를 별도로 만들어구현 객체 생성, 연결하..."
+  },
+  
+  {
+    "title": "섹션 5 - 싱글톤 컨테이너",
+    "url": "/posts/%E1%84%89%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AF%E1%84%90%E1%85%A9%E1%86%AB%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "싱글톤 패턴 : 클래스의 인스턴스가 딱 1개 생성되도록 보장 디자인 패턴싱글톤 패턴 구현방법1) static영역에 인스턴스 하나를 미리생성해서 올려둠2) 인스턴스 요청시 getInstance() 로  반환(항상 같은 instance)3) 생성자 private으로 막음싱글톤 패턴 단점  코드 자체가 많아짐  클라이언트가 구체클래스에 의존한다 -&amp;gt; DIP 위반 -&amp;gt; OCP 원칙 위배할 가능성 높음  테스트 어려움  유연성이 떨어짐싱글톤 컨테이너는 이러한 문제점 해결하면서 Bean을 싱글톤으로 관리함유의점 ..."
+  },
+  
+  {
+    "title": "섹션 4 - 스프링 컨테이너와 스프링 빈",
+    "url": "/posts/%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%E1%84%89%E1%85%B3%E1%84%91%E1%85%B3%E1%84%85%E1%85%B5%E1%86%BC%E1%84%87%E1%85%B5%E1%86%AB/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "ApplicationContext: 스프링 컨테이너ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);//1)모든 빈 이름 갖고오기String[] names = ac.getBeanDefinitionNames(); //2)빈 갖고오기Object bean = ac.getBean(names[1]); //3) BeanDefinition.ROLE_APPLICATION - 사용자가 정의한 빈//ROLE_INFRASTRUCTURE - 스프링 내부에서..."
+  },
+  
+  {
+    "title": "섹션 9 - 빈 스코프",
+    "url": "/posts/%E1%84%87%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B3%E1%84%8F%E1%85%A9%E1%84%91%E1%85%B3/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "프로토타입 빈은 스프링 컨테이너는 프로토타입 빈을 생성하고, 의존관계 주입, 초기화 까지만 처리한다.@PreDestroy 호출 되지 않는다.Prototype bean 과 singleton bean 같이 사용할 경우1) singleton bean 내부에서 prototype bean 을 주입 받아 사용하는 경우 초반 주입시에만 새로운 prototype bean 객체 생성됨  이후에는 singleton 과 같이 생성된 객체를 계속 사용하게 됨 - 새로 생성되지 않음2) 두개의 singleton 객체에서 같은 프로토타입 빈을 쓸때는 ..."
+  },
+  
+  {
+    "title": "섹션 8 - 빈 생명주기 콜백",
+    "url": "/posts/%E1%84%87%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A2%E1%86%BC%E1%84%86%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%AE%E1%84%80%E1%85%B5%E1%84%8F%E1%85%A9%E1%86%AF%E1%84%87%E1%85%A2%E1%86%A8/",
+    "categories": "Spring, Basic",
+    "tags": "Spring",
+    "date": "2022-02-26 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "  스프링 빈의 이벤트 라이프 사이클스프링 컨테이너 생성 -스프링 빈 생성 - 의존관계 주입 - 초기화 콜백 - 사용 - 소멸전 콜백 - 스프링 종료인터페이스(InitializingBean, DisposableBean)인터페이스를 이용한 빈 생명주기 콜백 사용하기InitializingBean-afterPropertiesSet : Bean 생성후 값 세팅 후 호출됨-destroy : Bean 소멸시 호출됨  단점1 : 스프링 전용 인터페이스에 의존  단점2 : 초기화, 소멸 메소드 이름 변경할 수 없음  코드를 고칠수 없는 외부..."
+  },
+  
+  {
+    "title": "정수 삼각형(43105)",
+    "url": "/posts/%EC%A0%95%EC%88%98%EC%82%BC%EA%B0%81%ED%98%95/",
+    "categories": "Algorithm, DynamicProgramming",
+    "tags": "DynamicProgramming, 프로그래머스, 알고리즘",
+    "date": "2021-04-25 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "Dynamic_Programming(동적계획법)https://programmers.co.kr/learn/courses/30/lessons/43105(level, 위치) - 두 값을 pair로 갖는 객체를 HashMap의 key값으로 하기 위해서Key라는 내부클래스를 만들었다.equals 함수를 overriding 해서 값이 같은 경우에 같다고 하도록 함수를 변경하였다.hashCode는 int 크기가 -2^16 ~ 2^ 16 이라 해당 값으로 하면 값이 unique할거라 생각해서아래 내용대로 구현하였다.정확하지는 않지만HashM..."
+  },
+  
+  {
+    "title": "네트워크(43162)",
+    "url": "/posts/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/",
+    "categories": "Algorithm, BFS_DFS",
+    "tags": "BFS, 프로그래머스, 알고리즘",
+    "date": "2021-04-20 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "처음에는 인접행렬이라 배열의 대각선을 기준으로 반만 확인하려 했지만 0-1-4 큰 순서대로만 연결되는 것이 아닌 0-5-2-3 처럼 연결되는 경우 수가 커졌다가 다시 작아질수도 있어서 아래부분 주석처리했습니다.BFShttps://programmers.co.kr/learn/courses/30/lessons/43162public static int solution(int n, int[][] computers) {        int answer = 0;        boolean[] visited = new boolean[n]; ..."
+  },
+  
+  {
+    "title": "N으로 표현하기(42895)",
+    "url": "/posts/N%EC%9C%BC%EB%A1%9C%ED%91%9C%ED%98%84/",
+    "categories": "Algorithm, DynamicProgramming",
+    "tags": "DynamicProgramming, 프로그래머스, 알고리즘",
+    "date": "2021-04-19 00:00:00 +0900",
+    
+
+
+
+
+
+    "snippet": "Dynamic_Programming(동적계획법)https://programmers.co.kr/learn/courses/30/lessons/42895public static void dynamic(int N, int n, int number) {		ArrayList&amp;lt;Integer&amp;gt; list;		 if (n == 1) {				list = new ArrayList&amp;lt;Integer&amp;gt;();			list.add(N);			memList.add(list);		} else {			Set&am..."
+  }
+  
+]
+
