@@ -13,7 +13,7 @@ aws code pipeline을 활용하여 cicd를 구축하기 위한 단계로
 - deploy 단계에서는 code deploy 사용
 
 CodeBuild에서 빌드 프로젝트를 생성해준다
-빌드할 소스의 위치를 전에 생성한 git commit으로 선택후 repository\, branch 을 선택해준다
+빌드할 소스의 위치를 전에 생성한 git commit으로 선택후 repository, branch 을 선택해준다
 ![screenshot](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/4fbe7201-5bb5-4ca1-95fc-ba4f9e514c46)
 
 환경이 운영체제는 해당 사항에 맞게 선택해주고
@@ -103,7 +103,7 @@ nohup java -jar $DEPLOY_JAR >> /home/ec2-user/deploy.log 2>/home/ec2-user/deploy
 
 참고블로그[https://twofootdog.tistory.com/38]
 
-위의 블로그를 보고 스크립트를 작성했는데 **BUILD_JAR\=\$\(ls \/home\/ec2\-user\/aws\/build\/libs\/\*\.jar\)** 라고 되어있는 위치가 내 경우에는 **buildspec\.yml** 에서 설정한 **discard\-paths\: yes** 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서
+위의 블로그를 보고 스크립트를 작성했는데 **BUILD_JAR\=\$\(ls /home/ec2\-user/aws/build\libs/\*\.jar\)** 라고 되어있는 위치가 내 경우에는 **buildspec\.yml** 에서 설정한 **discard\-paths\: yes** 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서
 
 ```sh
 script does not exist at specified location
@@ -112,7 +112,7 @@ script does not exist at specified location
 
 code deploy 관련해서 ec2에 생성되는 로그는
 
-\/var\/log\/aws\/codedeploy\-agent 해당 위치에서 로그를 확인 가능했다
+/var/log/aws/codedeploy\-agent 해당 위치에서 로그를 확인 가능했다
 
 그리고 EC2에 codedeploy 가 가능하게 하려면
 배포하려는 EC2 에 AWSCodeDeployRole을 추가 해 주고 codedeploy agent 설치도 해주어야한다
