@@ -31,7 +31,6 @@ git commit -m "commit message"
 git remote add origin https://git-codecommit.ap-northeast-2.amazonaws.com/v1/repos/hyun-repo
 
 git push -u origin master
-
 ```
 
 여기까지 하면 username, password 를 입력하라고 나오는데 이때 
