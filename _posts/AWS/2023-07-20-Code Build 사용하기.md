@@ -68,7 +68,7 @@ hooks:
     - location: /deploy.sh    # ApplicationStart 샘명 주기에서 deploy.sh 실행
 ```
 
-루트 폴더 아래에 'scrtips/deploy.sh' 파일을 생성한다.
+루트 폴더 아래에 \'scrtips\/deploy\.sh\' 파일을 생성한다
 
 ```bash
 #!/bin/bash
@@ -101,25 +101,25 @@ nohup java -jar $DEPLOY_JAR >> /home/ec2-user/deploy.log 2>/home/ec2-user/deploy
 
 참고블로그[https://twofootdog.tistory.com/38]
 
-위의 블로그를 보고 스크립트를 작성했는데 BUILD_JAR=$(ls /home/ec2-user/aws/build/libs/*.jar) 라고 되어있는 위치가 내 경우에는 buildspec.yml 에서 설정한 discard-paths: yes 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서 
+위의 블로그를 보고 스크립트를 작성했는데 'BUILD_JAR=$(ls /home/ec2-user/aws/build/libs/*.jar)' 라고 되어있는 위치가 내 경우에는 **buildspec\.yml** 에서 설정한 **discard-paths\: yes** 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서 
 
 ```sh
 script does not exist at specified location
 ```
-라는 오류가 떴어서 위치 조정을 해주었다.
+라는 오류가 떴어서 위치 조정을 해주었다
 
 code deploy 관련해서 ec2에 생성되는 로그는 
 
-"/var/log/aws/codedeploy-agent" 해당 위치에서 로그를 확인 가능했다.
+\/var\/log\/aws\/codedeploy-agent 해당 위치에서 로그를 확인 가능했다
 
 그리고 EC2에 codedeploy 가 가능하게 하려면 
-배포하려는 EC2 에 AWSCodeDeployRole을 추가 해 주고 codedeploy agent 설치도 해주어야한다.
+배포하려는 EC2 에 AWSCodeDeployRole을 추가 해 주고 codedeploy agent 설치도 해주어야한다
 
 ### AWSCodeDeployRole 추가
 ![스크린샷 2023-07-20 오후 2 55 34](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/63d238d4-8d96-4f75-80a2-c2f8558d9f22)
 
-위와 같이 AWSCodeDeployRole 권한이 있는 role을 생성해주고 해당 role을 ec2에 IAM Role로 설정해준다. 아래 권한의 SSM은 
-EC2에 sessionManager를 통해서 접속이 가능하도록 하는 권한이다.
+위와 같이 AWSCodeDeployRole 권한이 있는 role을 생성해주고 해당 role을 ec2에 IAM Role로 설정해준다<br>
+아래 권한의 SSM은 EC2에 sessionManager를 통해서 접속이 가능하도록 하는 권한이다
 
 ### CodeDeploy Agent 설치
 
@@ -141,5 +141,5 @@ sudo service codedeploy-agent status
 # codedeploy-agent 서비스 시작
 sudo service codedeploy-agent start
 ```
-status 로 codedeploy agent이 service up 이 되어있는지 확인한다.
+status 로 codedeploy agent이 service up 이 되어있는지 확인한다
 
