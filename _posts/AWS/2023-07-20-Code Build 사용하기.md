@@ -4,7 +4,6 @@ date : 2023-07-20
 categories : [AWS]
 tags: [AWS]
 ---
-
 ### AWS code pipeline 활용하기 위해 code build 빌드 프로젝트 생성
 
 aws code pipeline을 활용하여 cicd를 구축하기 위한 단계로
@@ -69,7 +68,7 @@ hooks:
     - location: /deploy.sh    # ApplicationStart 샘명 주기에서 deploy.sh 실행
 ```
 
-루트 폴더 아래에 scrtips/deploy.sh 파일을 생성한다.
+루트 폴더 아래에 'scrtips/deploy.sh' 파일을 생성한다.
 
 ```bash
 #!/bin/bash
@@ -111,7 +110,7 @@ script does not exist at specified location
 
 code deploy 관련해서 ec2에 생성되는 로그는 
 
-/var/log/aws/codedeploy-agent 해당 위치에서 로그를 확인 가능했다.
+"/var/log/aws/codedeploy-agent" 해당 위치에서 로그를 확인 가능했다.
 
 그리고 EC2에 codedeploy 가 가능하게 하려면 
 배포하려는 EC2 에 AWSCodeDeployRole을 추가 해 주고 codedeploy agent 설치도 해주어야한다.
