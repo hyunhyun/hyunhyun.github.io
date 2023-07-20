@@ -21,7 +21,7 @@ AWS CodeCommit에 대한 HTTPS Git 자격 증명에 아래와 같이 자격 증�
 
 그리고 기존의 git 사용법 대로 아래 명령어 순서대로 수행하여준다.
 
-```git
+```bash
 git init
 
 git add .
