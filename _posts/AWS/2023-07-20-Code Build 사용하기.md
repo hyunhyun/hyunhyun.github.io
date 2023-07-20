@@ -16,11 +16,11 @@ CodeBuild에서 빌드 프로젝트를 생성해준다
 ![스크린샷 2023-07-20 오후 2 28 19](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/4fbe7201-5bb5-4ca1-95fc-ba4f9e514c46)
 
 환경이 운영체제는 해당 사항에 맞게 선택해주고
-corretto11을 선택해 주었다. 
+corretto11을 선택해 주었다\. 
 기존 role이 없다면 새 서비스 역할을 선택해 주면 codebuild에 맞는 역할이 생성된다
 ![스크린샷 2023-07-20 오후 2 31 44](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/b12aeb4d-bb15-460a-bbd3-559c3481fc79)
 
-아래와 같이 codebuild에서 buildspec.yml 파일이 있어야 한다
+아래와 같이 codebuild에서 buildspec\.yml 파일이 있어야 한다
 ![스크린샷 2023-07-20 오후 2 35 25](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/69d69132-212c-4423-8d39-08bb26587ed0)
 
 프로젝트 소스 루트 바로 아래에 buildspec\.yml 파일을 생성한다
