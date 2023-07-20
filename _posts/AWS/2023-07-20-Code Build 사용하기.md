@@ -13,15 +13,15 @@ aws code pipeline을 활용하여 cicd를 구축하기 위한 단계로
 
 CodeBuild에서 빌드 프로젝트를 생성해준다
 빌드할 소스의 위치를 전에 생성한 git commit으로 선택후 repository, branch 을 선택해준다
-![스크린샷 2023-07-20 오후 2 28 19](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/4fbe7201-5bb5-4ca1-95fc-ba4f9e514c46)
+![screenshot](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/4fbe7201-5bb5-4ca1-95fc-ba4f9e514c46)
 
 환경이 운영체제는 해당 사항에 맞게 선택해주고
 corretto11을 선택해 주었다\. 
 기존 role이 없다면 새 서비스 역할을 선택해 주면 codebuild에 맞는 역할이 생성된다
-![스크린샷 2023-07-20 오후 2 31 44](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/b12aeb4d-bb15-460a-bbd3-559c3481fc79)
+![screenshot](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/b12aeb4d-bb15-460a-bbd3-559c3481fc79)
 
 아래와 같이 codebuild에서 buildspec\.yml 파일이 있어야 한다
-![스크린샷 2023-07-20 오후 2 35 25](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/69d69132-212c-4423-8d39-08bb26587ed0)
+![screenshot](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/69d69132-212c-4423-8d39-08bb26587ed0)
 
 프로젝트 소스 루트 바로 아래에 buildspec\.yml 파일을 생성한다
 ```yml
@@ -70,7 +70,7 @@ hooks:
     - location: /deploy.sh    # ApplicationStart 샘명 주기에서 deploy.sh 실행
 ```
 
-루트 폴더 아래에 'scrtips/deploy\.sh' 파일을 생성한다
+루트 폴더 아래에 'scripts/deploy\.sh' 파일을 생성한다
 
 ```bash
 #!/bin/bash
@@ -117,7 +117,7 @@ code deploy 관련해서 ec2에 생성되는 로그는
 배포하려는 EC2 에 AWSCodeDeployRole을 추가 해 주고 codedeploy agent 설치도 해주어야한다
 
 ### AWSCodeDeployRole 추가
-![스크린샷 2023-07-20 오후 2 55 34](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/63d238d4-8d96-4f75-80a2-c2f8558d9f22)
+![screenshot](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/63d238d4-8d96-4f75-80a2-c2f8558d9f22)
 
 위와 같이 AWSCodeDeployRole 권한이 있는 role을 생성해주고 해당 role을 ec2에 IAM Role로 설정해준다\.<br>
 아래 권한의 SSM은 EC2에 sessionManager를 통해서 접속이 가능하도록 하는 권한이다\.
