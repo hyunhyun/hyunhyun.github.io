@@ -33,7 +33,7 @@ git remote add origin https://git-codecommit.ap-northeast-2.amazonaws.com/v1/rep
 git push -u origin master
 ```
 
-여기까지 하면 username, password 를 입력하라고 나오는데 이때 
+여기까지 하면 username\, password 를 입력하라고 나오는데 이때 
 전에 만든 https git 자격 증명의 사용자 이름과 생성 시 자동으로 생성된 암호를 입략한다
 그럼 github등과 동일하게 aws code commit에 소스가 업로드 된 걸 확인 할 수 있다
 
