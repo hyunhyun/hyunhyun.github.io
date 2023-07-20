@@ -23,7 +23,7 @@ corretto11을 선택해 주었다.
 아래와 같이 codebuild에서 buildspec.yml 파일이 있어야 한다.
 ![스크린샷 2023-07-20 오후 2 35 25](https://github.com/hyunhyun/hyunhyun.github.io/assets/18597515/69d69132-212c-4423-8d39-08bb26587ed0)
 
-프로젝트 소스 루트 바로 아래에 buildspec.yml 파일을 생성한다.
+프로젝트 소스 루트 바로 아래에 buildspec\.yml 파일을 생성한다.
 ```yml
 version: 0.2
 
@@ -52,7 +52,7 @@ cache:
     - '/root/.gradle/caches/**/*'
 ```
 
-루트 폴더 바로 아래에 appspec.yml 도 추가한다
+루트 폴더 바로 아래에 appspec\.yml 도 추가한다
 
 ```yml
 version: 0.0 # version 필수 값, 0.0이 고정
@@ -101,7 +101,7 @@ nohup java -jar $DEPLOY_JAR >> /home/ec2-user/deploy.log 2>/home/ec2-user/deploy
 
 참고블로그[https://twofootdog.tistory.com/38]
 
-위의 블로그를 보고 스크립트를 작성했는데 'BUILD_JAR=$(ls /home/ec2-user/aws/build/libs/*.jar)' 라고 되어있는 위치가 내 경우에는 **buildspec\.yml** 에서 설정한 **discard-paths\: yes** 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서 
+위의 블로그를 보고 스크립트를 작성했는데 **BUILD_JAR\=\$\(ls \/home\/ec2-user\/aws\/build\/libs\/\*\.jar\)** 라고 되어있는 위치가 내 경우에는 **buildspec\.yml** 에서 설정한 **discard-paths\: yes** 때문인지 위치가 루트 바로 아래에 위치하게 되었어서 위치가 달라서 
 
 ```sh
 script does not exist at specified location
