@@ -1,5 +1,2 @@
 #ignore jekyll cache
 .jekyll-cache/
-
-#뭔지 모르는데 제외
-Gemfile.lock
