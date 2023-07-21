@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /norobots/
+
+# Sitemap: https://hyunhyun.github.io/sitemap.xml
+
+Sitemap: https://hyunhyun.github.io/sitemap.xml
